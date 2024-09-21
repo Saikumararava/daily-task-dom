@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Task Dom</title>
+</head>
+<body>
+    <h2>Hey buddy</h2> <button onclick="changeButtonText()">CLICK</button>
+    <br><br>
+    <img id="image"
+        src="https://c4.wallpaperflare.com/wallpaper/601/175/806/dragon-house-targaryen-game-of-thrones-wallpaper-preview.jpg"
+        height="550px" width="800px" />
+        <br><br>
+    <button onclick="changeImage()">HOUSE OF DRAGONS</button>
+    <br><br>
+    <p id="remove">Hola</p>
+</body>
+<script>
+
+    // Task 1: Creating and Appending an Element
+
+    const newdiv = document.createElement('div')
+    newdiv.textContent = ('Hello World!!')
+    document.body.append(newdiv)
+
+    // Task 2: Changing the Content of an Existing Element 
+
+    function changeButtonText() {
+
+        const heading = document.querySelector('h2');
+        if (heading) {
+            heading.textContent = "This is updated content with a click!";
+            heading.style.color = 'red';
+        } else {
+            console.log("button not clicked");
+        }
+    }
+    // Task 3: Creating and Appending a List of Items
+
+    const ul = document.createElement('ul')
+    const items = ['Item1', 'Item2', 'Item3']
+
+    items.forEach(element => {
+        const li = document.createElement('li')
+        li.textContent = element
+        ul.append(li)
+    });
+    document.body.append(ul)
+
+    // Task 4: Editing an Attribute of an Element
+
+    function changeImage() {
+        const element = document.getElementById('image');
+        element.setAttribute('src', 'https://images7.alphacoders.com/136/thumb-1920-1366073.jpeg');
+    }
+
+    // Task 5: Deleting an Element 
+
+    const element = document.getElementById('remove');
+    element.remove();
+
+</script>
+
+</html>
